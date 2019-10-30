@@ -1,0 +1,10 @@
+clc;
+T = 8;
+x = sinu(1,50,0,T,1000);
+y = sinu(1,100,0,T,1000);
+z = x + y;
+subplot(2,1,1);
+plot(abs(fft(z)));
+f = filter(Hd,z);
+subplot(2,1,2);
+plot(abs(fft(f)));
